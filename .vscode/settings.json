@@ -38,12 +38,21 @@
   "C_Cpp_Runner.compilerArgs": [],
   "C_Cpp_Runner.linkerArgs": [
     "-L/usr/lib/x86_64-linux-gnu",
+    "-L/usr/lib/x86_64-linux-gnu/glib-2.0",
+    "-L/usr/lib/x86_64-linux-gnu/gstreamer-1.0",
+    "-lglib-2.0",
+    "-lgstreamer-1.0",
+    "-lgobject-2.0",
     "-lldap_r",
-    "-o ../bin/ldap"
+    "-o ../bin/output"
   ],
   "C_Cpp_Runner.includePaths": [
     "${workspaceFolder}/**",
-    "/usr/include"
+    "/usr/include",
+    "/usr/include/glib-2.0",
+    "/usr/include/gstreamer-1.0",
+    "/usr/lib/x86_64-linux-gnu/gstreamer-1.0/include",
+    "/usr/lib/x86_64-linux-gnu/glib-2.0/include"
   ],
   "C_Cpp_Runner.includeSearch": [
     "*",
