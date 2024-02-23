@@ -1,7 +1,7 @@
 <log4c>
     <config>
         <appender name="file_appender" type="rollingfile">
-            <param name="File" value="log4c.log" />
+            <param name="File" value="/workspaces/Snipets/Log4C/bin/log4c.log" />
             <param name="MaxFileSize" value="5000000" />
             <param name="MaxBackupIndex" value="1" />
             <layout type="dated">
