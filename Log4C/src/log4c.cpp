@@ -1,38 +1,25 @@
-#include <log4c.h>
-#include <iostream>
 
+#include <log4cxx/logger.h>
+#include <log4cxx/basicconfigurator.h>
+#include <log4cxx/helpers/exception.h>
+#include <log4cxx/propertyconfigurator.h>
+
+using namespace log4cxx;
+using namespace log4cxx::helpers;
 
 int main() {
- 
-    if (log4c_load("./log4c.xml") == -1) {
-       std::cerr << "log4c_load() failed" << std::endl;
-        return 1;
-    } else {
-        std::cout<<"log4c_load() ...Done."<<std::endl;
-    }
+    // Set up a simple configuration that logs on the console.
+    BasicConfigurator::configure();
 
-        // Initialize log4c
-    if (log4c_init()) {
-        std::cerr << "log4c_init() failed" << std::endl;
-        return 1;
-    } else {
-        std::cout<<"log4c_init() ...Done."<<std::endl;
-    }
+    LoggerPtr logger(Logger::getLogger("MyApp"));
 
-    std::cout<<"Initialization has been done!"<<std::endl;
-    // Get a pointer to a category
-    log4c_category_t* mycat = log4c_category_get("mycat");
+    // Load configuration file
+    PropertyConfigurator::configure("./log4cxx.properties");
 
-    std::cout<<"About to log some messages..."<<std::endl;
-    // Log some messages
-    log4c_category_log(mycat, LOG4C_PRIORITY_ERROR, "This is an error message");
-    log4c_category_log(mycat, LOG4C_PRIORITY_WARN, "This is a warning message");
-    log4c_category_log(mycat, LOG4C_PRIORITY_INFO, "This is an info message");
+    LOG4CXX_DEBUG(logger, "This is a debug message");
+    LOG4CXX_INFO(logger, "This is an info message");
+    LOG4CXX_WARN(logger, "This is a warning message");
+    LOG4CXX_ERROR(logger, "This is an error message");
 
-    std::cout<<"About to clean resources..."<<std::endl;
-    // Cleanup log4c
-    log4c_fini();
-
-    std::cout<<"About to get out..."<<std::endl;
     return 0;
 }

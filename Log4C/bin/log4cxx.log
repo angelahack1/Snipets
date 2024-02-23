@@ -1,0 +1,4 @@
+0    [0x7f0ea8e27780] DEBUG MyApp null - This is a debug message
+0    [0x7f0ea8e27780] INFO  MyApp null - This is an info message
+0    [0x7f0ea8e27780] WARN  MyApp null - This is a warning message
+0    [0x7f0ea8e27780] ERROR MyApp null - This is an error message
