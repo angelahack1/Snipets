@@ -9,7 +9,7 @@
       "stopAtEntry": false,
       "externalConsole": false,
       "cwd": "/workspaces/Snipets/Ldap/src",
-      "program": "/workspaces/Snipets/Ldap/src/bin/output",
+      "program": "/workspaces/Snipets/Ldap/bin/output",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
