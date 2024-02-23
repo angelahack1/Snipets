@@ -9,7 +9,7 @@
       "stopAtEntry": false,
       "externalConsole": false,
       "cwd": "/workspaces/Snipets/Ldap/src",
-      "program": "/workspaces/Snipets/Ldap/bin/output",
+      "program": "/workspaces/Snipets/Ldap/src/bin/output",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
@@ -29,6 +29,25 @@
       "externalConsole": false,
       "cwd": "/workspaces/Snipets/Gstreamer/gstreamer_01/src",
       "program": "/workspaces/Snipets/Gstreamer/gstreamer_01/bin/output",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": false,
+      "cwd": "/workspaces/Snipets/Log4C/src",
+      "program": "/workspaces/Snipets/Log4C/bin/output",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

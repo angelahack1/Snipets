@@ -44,6 +44,7 @@
     "-lgstreamer-1.0",
     "-lgobject-2.0",
     "-lldap_r",
+    "-llog4c",
     "-o ../bin/output"
   ],
   "C_Cpp_Runner.includePaths": [

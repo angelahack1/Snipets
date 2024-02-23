@@ -16,7 +16,8 @@
       "intelliSenseMode": "linux-gcc-x64",
       "compilerArgs": [
         "-L/usr/lib/x86_64-linux-gnu",
-        "-lldap_r"
+        "-lldap_r",
+        "-llog4c"
       ]
     }
   ],
